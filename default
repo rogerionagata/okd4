@@ -1,0 +1,23 @@
+default menu.c32
+prompt 0
+timeout 30
+menu title PXE Menu
+
+label 1
+menu label ^1) Boot from local drive
+localboot 0x00
+
+label 2
+menu label ^2) Install OKD Bootstrap
+KERNEL /fcsos/vmlinuz
+APPEND initrd=/fcsos/initrd.img coreos.inst.install_dev=/dev/vda coreos.inst.image_url=http://192.168.1.200:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.1.200:8080/okd4/bootstrap.ign
+
+label 3
+menu label ^3) Install OKD Master
+KERNEL /fcsos/vmlinuz
+APPEND initrd=/fcsos/initrd.imgcoreos.inst.install_dev=/dev/vda coreos.inst.image_url=http://192.168.1.200:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.1.200:8080/okd4/master.ign
+
+label 4
+menu label ^4) Install OKD Worker
+KERNEL /fcsos/vmlinuz
+APPEND initrd=/fcsos/initrd.img coreos.inst.install_dev=/dev/vda coreos.inst.image_url=http://192.168.1.200:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.1.200:8080/okd4/worker.ign
