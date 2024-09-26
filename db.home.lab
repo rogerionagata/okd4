@@ -13,22 +13,24 @@ $TTL    604800
 ; name servers - A records
 okd4-services.home.lab.      IN  A  192.168.1.200
 
-; OpenShift Container Platform Cluster - A records
-okd4-bootstrap.okd.home.lab. IN  A  192.168.1.210
+control-plane1.okd.home.lab.   IN  A  192.168.1.201
+control-plane2.okd.home.lab.   IN  A  192.168.1.202
+control-plane3.okd.home.lab.   IN  A  192.168.1.203
+compute1.okd.home.lab.  IN  A  192.168.1.204
+compute2.okd.home.lab.  IN  A  192.168.1.205
+compute3.okd.home.lab.  IN  A  192.168.1.206
+compute4.okd.home.lab.  IN  A  192.168.1.207
 
-okd4-mastr-1.okd.home.lab.   IN  A  192.168.1.201
-okd4-mastr-2.okd.home.lab.   IN  A  192.168.1.202
-okd4-mastr-3.okd.home.lab.   IN  A  192.168.1.203
-okd4-worker-1.okd.home.lab.  IN  A  192.168.1.204
-okd4-worker-2.okd.home.lab.  IN  A  192.168.1.205
-okd4-worker-3.okd.home.lab.  IN  A  192.168.1.206
-okd4-worker-4.okd.home.lab.  IN  A  192.168.1.207
-
-; OpenShift internal cluster IPs - A records
+; Kubernetes API
 api.okd.home.lab.            IN  A  192.168.1.200
 api-int.okd.home.lab.        IN  A  192.168.1.200
 
+; Routes
 *.apps.okd.home.lab.         IN  A  192.168.1.200
+
+; Bootstrap machine
+bootstrap.okd.home.lab. IN  A  192.168.1.210
+
 console.apps.okd.home.lab.   IN  A  192.168.1.200
 oauth.apps.okd.home.lab.     IN  A  192.168.1.200
 
