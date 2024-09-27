@@ -1,5 +1,5 @@
 $TTL    604800
-@       IN      SOA     okd4-services.home.lab. admin.home.lab. (
+@       IN      SOA     services.home.lab. admin.home.lab. (
                   6     ; Serial
              604800     ; Refresh
               86400     ; Retry
@@ -8,10 +8,10 @@ $TTL    604800
 )
 
 ; name servers - NS records
-    IN      NS      okd4-services.home.lab.
+    IN      NS      services.home.lab.
 
 ; name servers - PTR records
-200    IN    PTR    okd4-services.home.lab.
+200    IN    PTR    services.home.lab.
 
 ; OpenShift Container Platform Cluster - PTR records
 200    IN    PTR    api.okd.home.lab.

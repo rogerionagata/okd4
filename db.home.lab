@@ -1,5 +1,5 @@
 $TTL    604800
-@       IN      SOA     okd4-services.home.lab. admin.home.lab. (
+@       IN      SOA     services.home.lab. admin.home.lab. (
                   1     ; Serial
              604800     ; Refresh
               86400     ; Retry
@@ -8,10 +8,10 @@ $TTL    604800
 )
 
 ; name servers - NS records
-    IN      NS      okd4-services
+    IN      NS      services
 
 ; name servers - A records
-okd4-services.home.lab.      IN  A  192.168.1.200
+services.home.lab.      IN  A  192.168.1.200
 
 control-plane1.okd.home.lab.   IN  A  192.168.1.201
 control-plane2.okd.home.lab.   IN  A  192.168.1.202
